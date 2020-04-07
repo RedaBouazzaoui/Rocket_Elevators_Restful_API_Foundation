@@ -24,6 +24,7 @@ namespace TodoApi.Models
         public virtual DbSet<batteries> batteries { get; set; }
         public virtual DbSet<quotes> quotes { get; set; }
         public virtual DbSet<users> users { get; set; }
+        public virtual DbSet<interventions> interventions { get; set; }
         protected override void OnModelCreating (ModelBuilder modelBuilder) {
 
          modelBuilder.Entity<batteries> (entity => {
@@ -428,6 +429,74 @@ namespace TodoApi.Models
                     
 
                  });
+
+
+
+
+                 modelBuilder.Entity<interventions> (entity => {
+                entity.ToTable ("interventions");
+
+                
+
+                entity.Property (e => e.id)
+                    .HasColumnName ("id")
+                    .HasColumnType ("bigint(20)");
+
+                    entity.Property (e => e.status)
+                    .HasColumnName ("status")
+                    .HasColumnType ("VARCHAR(20)");
+
+                    entity.Property (e => e.start_intervention)
+                    .HasColumnName ("start_intervention")
+                    .HasColumnType ("datetime");
+
+                    entity.Property (e => e.end_intervention)
+                    .HasColumnName ("end_intervention")
+                    .HasColumnType ("datetime");
+
+                    entity.Property (e => e.author)
+                    .HasColumnName ("author")
+                    .HasColumnType ("bigint(20)");
+
+                    entity.Property (e => e.customer_id )
+                    .HasColumnName ("customer_id")
+                    .HasColumnType ("bigint(20)");
+
+                    entity.Property (e => e.building_id )
+                    .HasColumnName ("building_id")
+                    .HasColumnType ("bigint(20)");
+
+                    entity.Property (e => e.column_id )
+                    .HasColumnName ("column_id")
+                    .HasColumnType ("bigint(20)");
+
+                    entity.Property (e => e.elevator_id )
+                    .HasColumnName ("elevator_id")
+                    .HasColumnType ("bigint(20)");
+
+
+                    entity.Property (e => e.employee_id)
+                    .HasColumnName ("employee_id")
+                    .HasColumnType ("bigint(20)");
+
+
+                    entity.Property (e => e.resultat )
+                    .HasColumnName ("resultat")
+                    .HasColumnType ("String");
+
+                     entity.Property (e => e.rapport)
+                    .HasColumnName ("rapport")
+                    .HasColumnType ("String");
+
+
+
+
+
+
+
+                    
+
+                     });
     }
 
 

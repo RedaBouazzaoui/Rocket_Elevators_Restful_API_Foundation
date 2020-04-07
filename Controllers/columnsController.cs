@@ -37,7 +37,7 @@ namespace TodoApi.Controllers
              var json = new JObject ();
             json["status"] = columns.status;
             return Content (json.ToString (), "application/json");
-            return  Content (json.ToString (), "application/json"); ;
+            
         }
 
         // PUT: api/columns/5
