@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'rocketelevatorapirestful'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6de7380793284e37aa4fc1aadf6ed4b2 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f9978ff1bff545a7a17ad5ee10230a51 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
