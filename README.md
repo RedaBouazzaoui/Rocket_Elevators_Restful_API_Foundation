@@ -17,7 +17,7 @@ PUT: Change the status of the request for action to "Completed" and add an end d
 PUT https://rocketelevatorapirestful.azurewebsites.net/api/interventions/Completed/id
 
 Odyssey Week 8
-Rocket Elevators New REST API
+
 
 How to answer the 9 questions in Postman :
 
